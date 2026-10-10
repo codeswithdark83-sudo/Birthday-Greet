@@ -60,7 +60,7 @@ function Envelope({ config, stage, onOpen }) {
                 <div className="env-back" />
 
                 <div className="letter" aria-hidden="true">
-                  <span className="letter-script">For {config.nickname}</span>
+                  <span className="letter-script">For {config.friendName}</span>
                   <span className="letter-lines">
                     <i />
                     <i />

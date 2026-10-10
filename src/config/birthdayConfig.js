@@ -12,7 +12,7 @@ const birthdayConfig = {
 
   // Screen two
   cardHeading: 'Happy Birthday, Aayushi! 🎂',
-  cardSubheading: 'Our Skyla, today is YOUR day! 💗',
+  cardSubheading: 'Aayushi, today is YOUR day! 💗',
 
   // Each string is one paragraph.
   birthdayMessage: [
@@ -25,7 +25,7 @@ const birthdayConfig = {
 
   wishMessage: 'May every beautiful wish of yours come true! 💗',
   additionalSurpriseMessage:
-    'No matter how busy life gets, I hope you always find reasons to smile and moments that remind you how special you are. Stay happy, Aayushi! 🫶 — Dark',
+    'No matter how busy life gets, I hope you always find reasons to smile and moments that remind you how special you are. Stay happy, Aayushi! 🫶 — Your Dark Bhai',
 
   // Assets (files live in the public/ folder)
   friendPhotoPath: '/images/aayushi.jpg',

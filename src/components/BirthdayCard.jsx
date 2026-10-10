@@ -164,7 +164,7 @@ export default function BirthdayCard({ config, reducedMotion, onReplay }) {
         open={surpriseOpen}
         onClose={closeSurprise}
         message={config.additionalSurpriseMessage}
-        nickname={config.nickname}
+        nickname={config.friendName}
       />
       <Confetti burstId={burstId} reducedMotion={reducedMotion} />
     </main>

@@ -1,0 +1,199 @@
+:root {
+  --blush: #f8dde8;
+  --soft-pink: #f3bfd2;
+  --cream: #fff9f2;
+  --lavender: #e8dff5;
+  --rose: #c65d83;
+  --rose-deep: #a8446a;
+  --brown: #59444b;
+
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Nunito', ui-rounded, 'SF Pro Rounded', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-script: 'Dancing Script', 'Segoe Script', 'Bradley Hand', 'Snell Roundhand', cursive;
+
+  --shadow-soft: 0 10px 30px rgba(198, 93, 131, 0.18);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--brown);
+  background: linear-gradient(160deg, var(--blush) 0%, var(--cream) 55%, var(--lavender) 130%);
+  background-attachment: fixed;
+  background-color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root,
+.app {
+  min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
+}
+
+h1,
+h2,
+p,
+figure {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--rose-deep);
+  outline-offset: 3px;
+}
+
+/* ---------- Shared buttons ---------- */
+.btn {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  min-height: 48px;
+  padding: 0.7rem 1.35rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-primary {
+  background: var(--rose-deep);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(168, 68, 106, 0.3);
+}
+
+.btn-soft {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--rose-deep);
+  border: 2px solid var(--soft-pink);
+}
+
+@media (hover: hover) {
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(168, 68, 106, 0.35);
+  }
+  .btn-soft:hover {
+    background: #fff;
+    transform: translateY(-2px);
+  }
+}
+
+/* ---------- Ambient background ---------- */
+.ambient {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-heart {
+  position: absolute;
+  top: 0;
+  color: var(--rose);
+  will-change: transform;
+  animation: floatUp linear infinite;
+}
+
+.ambient-sparkle {
+  position: absolute;
+  background: radial-gradient(circle, #fff 0%, rgba(255, 255, 255, 0.6) 40%, transparent 70%);
+  border-radius: 50%;
+  animation: twinkle 3.4s ease-in-out infinite;
+}
+
+/* ---------- Music toggle ---------- */
+.music {
+  position: fixed;
+  top: max(0.75rem, env(safe-area-inset-top));
+  right: max(0.75rem, env(safe-area-inset-right));
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+  max-width: calc(100vw - 1.5rem);
+}
+
+.music-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  padding: 0.4rem 0.9rem;
+  border: 2px solid var(--soft-pink);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--rose-deep);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.music-btn.on {
+  background: var(--rose-deep);
+  border-color: var(--rose-deep);
+  color: #fff;
+}
+
+.music-msg {
+  margin: 0;
+  max-width: 17rem;
+  padding: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: right;
+  color: var(--brown);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+}
+
+.music-msg:not(:empty) {
+  padding: 0.5rem 0.75rem;
+  box-shadow: var(--shadow-soft);
+  animation: fadeUp 0.3s ease both;
+}
+
+/* ---------- Confetti canvas ---------- */
+.confetti {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 70;
+}

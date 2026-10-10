@@ -99,7 +99,7 @@ export default function BirthdayCard({ config, reducedMotion, onReplay }) {
           <h2 className="card-subtitle">{config.cardSubheading}</h2>
         </header>
 
-        <PhotoFrame src={config.friendPhotoPath} alt={config.photoAlt} nickname={config.nickname} />
+        <PhotoFrame src={config.friendPhotoPath} alt={config.photoAlt} nickname={config.friendName} />
 
         <section className="message" aria-label="Your birthday message">
           {config.birthdayMessage.map((para, i) => (

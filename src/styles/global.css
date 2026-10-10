@@ -126,6 +126,14 @@ button {
   animation: floatUp linear infinite;
 }
 
+.ambient-cake {
+  position: absolute;
+  top: 0;
+  line-height: 1;
+  will-change: transform;
+  animation: floatUp linear infinite;
+}
+
 .ambient-sparkle {
   position: absolute;
   background: radial-gradient(circle, #fff 0%, rgba(255, 255, 255, 0.6) 40%, transparent 70%);

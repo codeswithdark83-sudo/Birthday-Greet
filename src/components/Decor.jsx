@@ -46,6 +46,15 @@ const HEARTS = Array.from({ length: 12 }, (_, i) => ({
   opacity: 0.18 + ((i * 3) % 4) * 0.07,
 }));
 
+// A few drifting cakes among the hearts (kept sparse so the page stays calm).
+const CAKES = Array.from({ length: 5 }, (_, i) => ({
+  left: (i * 41 + 20) % 90,
+  size: 24 + (i % 3) * 6,
+  duration: 20 + ((i * 4) % 8),
+  delay: -((i * 5.3) % 20),
+  opacity: 0.35 + (i % 3) * 0.08,
+}));
+
 const SPARKLES = Array.from({ length: 8 }, (_, i) => ({
   left: (i * 53 + 11) % 92,
   top: (i * 29 + 7) % 88,
@@ -70,6 +79,21 @@ function Ambient() {
             animationDelay: `${h.delay}s`,
           }}
         />
+      ))}
+      {CAKES.map((c, i) => (
+        <span
+          key={`c${i}`}
+          className="ambient-cake"
+          style={{
+            left: `${c.left}%`,
+            fontSize: c.size,
+            opacity: c.opacity,
+            animationDuration: `${c.duration}s`,
+            animationDelay: `${c.delay}s`,
+          }}
+        >
+          🎂
+        </span>
       ))}
       {SPARKLES.map((s, i) => (
         <span

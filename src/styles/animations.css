@@ -118,13 +118,15 @@
 /* Reduced motion: no drifting, no bobbing, near-instant transitions. */
 @media (prefers-reduced-motion: reduce) {
   .ambient-heart,
+  .ambient-cake,
   .ambient-sparkle,
   .env-bob,
   .scene-hint {
     animation: none !important;
   }
 
-  .ambient-heart {
+  .ambient-heart,
+  .ambient-cake {
     transform: translate3d(0, 40vh, 0);
   }
 

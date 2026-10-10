@@ -17,10 +17,10 @@ const birthdayConfig = {
   // Each string is one paragraph.
   birthdayMessage: [
     'Happy Birthday! 🎂✨',
-    'May this year bring you all the success you deserve. Dua hai ki tera gaming career ekdum zabardast chale aur jo bhi professional career tu choose kare, wo bhi super fast aur smoothly start ho jaye! Keep grinding and shining.',
-    'Aur haan, itne saalon se itni acchi aur pyaari dost rehne ke liye Dil se Thank You! Hamesha aisi hi rehna. Have the best day! 🎉',
+    'May this year bring you all the success you deserve. I truly hope your gaming career takes off like crazy, and whatever professional path you choose starts off smoothly and super fast! Keep grinding and shining.',
+    'And yes, thank you from the bottom of my heart for being such a wonderful friend for all these years. Always stay the same. Have the absolute best day! 🎉',
   ],
-  signatureLead: '', // leave empty to show only the name line
+  signatureLead: '', // optional line above the name; leave empty to hide
   signatureName: '– Your Dark Bhai',
 
   wishMessage: 'May every beautiful wish of yours come true! 💗',

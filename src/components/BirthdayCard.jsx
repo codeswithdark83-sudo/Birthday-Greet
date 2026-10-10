@@ -108,7 +108,7 @@ export default function BirthdayCard({ config, reducedMotion, onReplay }) {
             </p>
           ))}
           <p className="signature" style={{ '--i': config.birthdayMessage.length }}>
-            <span className="sig-lead">{config.signatureLead}</span>
+            {config.signatureLead && <span className="sig-lead">{config.signatureLead}</span>}
             <span className="sig-name">{config.signatureName}</span>
           </p>
         </section>

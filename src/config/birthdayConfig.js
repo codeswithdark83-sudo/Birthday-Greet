@@ -16,13 +16,12 @@ const birthdayConfig = {
 
   // Each string is one paragraph.
   birthdayMessage: [
-    'Happy Birthday, Aayushi! 💖',
-    'I hope your special day brings you a million reasons to smile and countless beautiful memories to cherish. Never stop being the amazing person you are. You deserve happiness, love, success, and all the little things that make life beautiful.',
-    'Keep shining, keep smiling, and keep being our wonderful Skyla. May this new chapter of your life be filled with exciting adventures, unexpected blessings, and dreams coming true.',
-    'Enjoy every little moment of your day. You deserve all the happiness in the world! 🎂✨',
+    'Happy Birthday! 🎂✨',
+    'May this year bring you all the success you deserve. Dua hai ki tera gaming career ekdum zabardast chale aur jo bhi professional career tu choose kare, wo bhi super fast aur smoothly start ho jaye! Keep grinding and shining.',
+    'Aur haan, itne saalon se itni acchi aur pyaari dost rehne ke liye Dil se Thank You! Hamesha aisi hi rehna. Have the best day! 🎉',
   ],
-  signatureLead: 'With lots of love and best wishes,',
-  signatureName: 'Dark ❤️',
+  signatureLead: '', // leave empty to show only the name line
+  signatureName: '– Your Dark Bhai',
 
   wishMessage: 'May every beautiful wish of yours come true! 💗',
   additionalSurpriseMessage:

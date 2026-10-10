@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
 
 const FRIENDLY_ERROR = "The music isn't available right now, but the card is all yours 💗";
 
@@ -22,8 +22,8 @@ function MusicIcon({ on }) {
   );
 }
 
-/** Opt-in background music. Never autoplays; only starts from a user press. */
-export default function MusicToggle({ src }) {
+/** Background music. Only ever starts from a user tap (envelope or the music button). */
+const MusicToggle = forwardRef(function MusicToggle({ src }, ref) {
   const audioRef = useRef(null);
   const timerRef = useRef(0);
   const [playing, setPlaying] = useState(false);
@@ -46,6 +46,17 @@ export default function MusicToggle({ src }) {
       }
     };
   }, []);
+
+  // Lets the parent start the music from inside a user tap (the envelope tap).
+  // Failures are silent here; the visible button still lets her start it herself.
+  useImperativeHandle(ref, () => ({
+    start() {
+      const audio = audioRef.current;
+      if (!audio || !audio.paused) return;
+      const p = audio.play();
+      if (p && p.catch) p.catch(() => setPlaying(false));
+    },
+  }));
 
   const toggle = async () => {
     const audio = audioRef.current;
@@ -81,7 +92,7 @@ export default function MusicToggle({ src }) {
         ref={audioRef}
         src={src}
         loop
-        preload="none"
+        preload="auto"
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
         onError={() => {
@@ -91,4 +102,6 @@ export default function MusicToggle({ src }) {
       />
     </div>
   );
-}
+});
+
+export default MusicToggle;

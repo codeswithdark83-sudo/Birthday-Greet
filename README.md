@@ -35,11 +35,13 @@ Everything personal is in **`src/config/birthdayConfig.js`**: names, every messa
 Different file name or type (e.g. `skyla.png`)? Change `friendPhotoPath` in the config to `/images/skyla.png`.
 If the photo is missing, a pretty flower placeholder shows instead, so the page never looks broken.
 
-## Add optional music
+## Music
 
-1. Use a track you have the rights to use (your own recording, or a royalty-free / properly licensed file).
-2. Save it as **`public/music/birthday-music.mp3`**.
-3. Music never starts by itself. Aayushi presses the **Music off** button (top-right) to play, and again to pause. If the file is missing she sees a friendly message and everything else keeps working.
+A short, original music-box "Happy Birthday" tune is already included at `public/music/birthday-music.mp3`.
+
+Browsers never allow sound to start on their own when a link opens, so the music **starts the moment Aayushi taps the envelope** (that tap counts as her permission). She can pause or resume it with the **Music on/off** button (top-right). If the file is missing or playback fails, nothing breaks.
+
+To use your own track (one you have the rights to), replace `public/music/birthday-music.mp3` with it, keeping the same name.
 
 ## Deploy
 
@@ -64,7 +66,7 @@ No GitHub? Run `npx vercel` in this folder and follow the prompts, then `npx ver
 
 1. Open the deployed link on an Android phone and an iPhone (Chrome and Safari).
 2. Check: the envelope is centred, tapping it opens the flap and the letter slides out, the photo is cropped nicely, the message isn't cut off, and all three buttons plus "Open the Letter Again" work.
-3. Tap **Music off** to confirm it plays only after you tap (iPhones need silent mode off to hear audio).
+3. Tap the envelope and confirm the music starts (iPhones need silent mode off to hear audio), then tap the music button to pause and resume.
 4. Rotate the phone to landscape: the page should scroll rather than clip.
 5. Locally on the same Wi-Fi: `npm run dev -- --host` and open the "Network" address on your phone.
 

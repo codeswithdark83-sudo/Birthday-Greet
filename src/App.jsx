@@ -27,6 +27,7 @@ export default function App() {
   const [showEnvelope, setShowEnvelope] = useState(true);
   const [round, setRound] = useState(0);
   const timers = useRef([]);
+  const musicRef = useRef(null);
 
   const clearTimers = () => {
     timers.current.forEach(clearTimeout);
@@ -49,6 +50,7 @@ export default function App() {
 
   const handleOpen = () => {
     if (stage !== 'sealed') return; // ignore repeated taps during the animation
+    musicRef.current?.start(); // her tap is the user gesture browsers require
     setStage('opening');
     later(() => {
       setStage('revealed');
@@ -68,7 +70,7 @@ export default function App() {
   return (
     <div className="app">
       <AmbientBackground />
-      <MusicToggle src={birthdayConfig.musicPath} />
+      <MusicToggle ref={musicRef} src={birthdayConfig.musicPath} />
 
       {stage === 'revealed' && (
         <BirthdayCard

@@ -16,6 +16,7 @@ const birthdayConfig = {
 
   // Each string is one paragraph.
   birthdayMessage: [
+    'Happy Birthday! 🎉🥳',
     "Honestly, it feels crazy to think that it’s already been three years since we first met in a random CODM lobby. Who knew that one random match would turn into such a special friendship? 😂❤️",
     "To everyone else, you’re Skyla, the talented content creator who’s growing, achieving new milestones, and making everyone proud. But for me, you’ll always be my OG Reyna, the same person I teamed up with on Day 1. And no matter how much things change, that’ll never change. 🫶🏻",
     "Over these three years, we’ve seen so much together. People came and went, some old friends drifted away, and we met so many amazing new people along the way. Somehow, that random CODM connection turned into a whole family across Discord, Instagram, and YouTube. We’ve had different people, different vibes, and plenty of changes, but I’m genuinely glad that our bond is still here. ❤️‍🩹✨",

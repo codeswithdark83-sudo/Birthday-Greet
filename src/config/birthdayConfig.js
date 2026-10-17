@@ -11,17 +11,22 @@ const birthdayConfig = {
   tapHint: 'Tap the envelope to open your surprise 💌',
 
   // Screen two
-  cardHeading: 'Happy Birthday, Aayushi! 🎂',
-  cardSubheading: 'Aayushi, today is YOUR day! 💗',
+  cardHeading: 'Dear Skyla, my OG Reyna ❤️🎂',
+  cardSubheading: 'Happy Birthday! 🎉🥳',
 
   // Each string is one paragraph.
   birthdayMessage: [
-    'Happy Birthday! 🎂✨',
-    'May this year bring you all the success you deserve. I truly hope your gaming career takes off like crazy, and whatever professional path you choose starts off smoothly and super fast! Keep grinding and shining.',
-    'And yes, thank you from the bottom of my heart for being such a wonderful friend for all these years. Always stay the same. Have the absolute best day! 🎉',
+    "Honestly, it feels crazy to think that it’s already been three years since we first met in a random CODM lobby. Who knew that one random match would turn into such a special friendship? 😂❤️",
+    "To everyone else, you’re Skyla, the talented content creator who’s growing, achieving new milestones, and making everyone proud. But for me, you’ll always be my OG Reyna, the same person I teamed up with on Day 1. And no matter how much things change, that’ll never change. 🫶🏻",
+    "Over these three years, we’ve seen so much together. People came and went, some old friends drifted away, and we met so many amazing new people along the way. Somehow, that random CODM connection turned into a whole family across Discord, Instagram, and YouTube. We’ve had different people, different vibes, and plenty of changes, but I’m genuinely glad that our bond is still here. ❤️‍🩹✨",
+    "And seriously, thank you for trusting me with the role of Admin. Being a part of your journey, helping manage our little community, and supporting you behind the scenes means more to me than you probably realize. I’m happy I get to be a part of something you’ve worked so hard to build. ❤️",
+    "I hope this new year of your life brings you even more success on YouTube, crazy growth, unforgettable gaming moments, countless clutch wins, and, most importantly, genuine happiness. May you achieve everything you’ve been working towards and keep becoming the person you dream of being. 🥹💗",
+    "No matter how much the community grows or how many things change, I’ll always be grateful that one random CODM match brought us together. Here’s to more years of friendship, more memories, more laughs, and many more Ws together! 🥂🎮",
+    "Enjoy your special day to the fullest, Skyla. You deserve all the love and happiness coming your way. ❤️",
+    "Once again, Happy Birthday to my Skyla, my OG Reyna! 🎂🎈✨",
   ],
-  signatureLead: '', // optional line above the name; leave empty to hide
-  signatureName: '– Your Dark Bhai',
+  signatureLead: 'With love and respect,',
+  signatureName: '— Dark 🖤',
 
   wishMessage: 'May every beautiful wish of yours come true! 💗',
   additionalSurpriseMessage:
